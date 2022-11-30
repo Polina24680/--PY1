@@ -14,3 +14,5 @@ for i in tuple(range(1,10)):
 need_money = delta_need + need
 
 print(round(need_money))
+
+
