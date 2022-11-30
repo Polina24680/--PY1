@@ -14,6 +14,9 @@ data = [
 
 # TODO вызвать функцию to_csv_file и записать данные в файл
 
-with open(OUTPUT_FILE) as output_f:
-    for line in output_f:
-        print(line, end="")
+
+def to_csv_file(OUTPUT_FILE, headers_list, data, delimiter=",", new_line="\n"):
+    with open(OUTPUT_FILE, 'w+') as f:
+        f.write(delimiter.join(headers_list) + new_line)
+        f.write(new_line.join([ delimiter.join(i) for i in data]))
+
